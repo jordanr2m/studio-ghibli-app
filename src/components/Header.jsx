@@ -2,7 +2,7 @@
 
 const Header = () => {
   return (
-    <header>
+    <header className="Header">
       <h1>Studio Ghibli Film Finder</h1>
     </header>
   )

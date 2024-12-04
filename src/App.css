@@ -1,5 +1,68 @@
-.App {
+/* Google Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --header: rgb(74, 184, 74);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* display: flex; */
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* !!! SVG styles go HERE */
+
+h1 {
+  font-size: 4rem;
+  font-family: "Sour Gummy", sans-serif;
+  letter-spacing: 4px;
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
 
+h3 {
+  font-size: 1.3125rem;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Make all Components 100% width */
+main, 
+header,
+footer {
+  width: 100%;
+}
