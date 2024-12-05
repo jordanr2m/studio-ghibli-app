@@ -1,5 +1,7 @@
 /* Google Font imports */
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --header: rgb(74, 184, 74);
@@ -16,7 +18,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Lexend", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* display: flex; */
@@ -65,4 +67,20 @@ main,
 header,
 footer {
   width: 100%;
+}
+
+/* HEADER styles */
+header {
+  padding: 2rem 0 3rem 0;
+  background-color: rgb(101, 239, 101);
+}
+
+header h1,
+header h2 {
+  margin-top: 1rem;
+}
+
+.logo-wrapper {
+  width: 20%;
+  max-width: 300px;
 }
