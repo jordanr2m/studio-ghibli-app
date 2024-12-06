@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
+import FavoriteFilms from './components/movies/FavoriteFilms';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -27,6 +28,9 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <main>
+        <FavoriteFilms />
+      </main>
     </div>
   );
 }
