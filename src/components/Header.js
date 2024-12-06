@@ -7,9 +7,8 @@ const Header = () => {
         <div className='logo-wrapper'>
           <img src={logo} alt="Studio Ghibli Logo" />
         </div>
-        <div className='header-text'>
+        <div className='typewriter'>
           <h1>Studio Ghibli Film Finder</h1>
-          <h2>Find your next Ghibli film ◡̈</h2>
         </div>
       </div>
     </header>
