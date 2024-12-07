@@ -1,4 +1,5 @@
-
+import { SiRottentomatoes } from "react-icons/si";
+import { FaRegStar, FaStar } from "react-icons/fa";
 
 const FilmCard = ({ movie }) => {
 
@@ -18,10 +19,25 @@ const FilmCard = ({ movie }) => {
                 </div>
                 <div className="film-info">
                     <h3>{movie.title} <span>({movie.release_date})</span></h3>
-                    <p>Directed by: {movie.director}</p>
+                    <p>Directed by: <b>{movie.director}</b></p>
                     <p>Runtime: {convertRuntime(movie.running_time)}</p>
+                    <div className="rt-score">
+                        <SiRottentomatoes className="tomatoe-icon" />
+                        <p>{movie.rt_score}%</p>
+                    </div>
                 </div>
             </div>
+
+            <footer>
+                <p className="add-favorite">
+                    <button
+                        aria-label="Add to favorites"
+                    // onClick={() => addToFavorites(quote.id)}
+                    >
+                        <FaRegStar />
+                    </button>
+                </p>
+            </footer>
         </article>
     )
 }
