@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import { FiLoader } from "react-icons/fi";
 import Header from './components/Header';
 import FavoriteFilms from './components/movies/FavoriteFilms';
+import Films from './components/movies/Films';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -30,6 +32,11 @@ function App() {
       <Header/>
       <main>
         <FavoriteFilms />
+        {isLoading ? (
+          <FiLoader className='loader' />
+        ) : (
+          <Films />
+        )}
       </main>
     </div>
   );
