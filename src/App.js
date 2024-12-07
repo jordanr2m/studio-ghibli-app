@@ -35,7 +35,9 @@ function App() {
         {isLoading ? (
           <FiLoader className='loader' />
         ) : (
-          <Films />
+          <Films 
+            movies={movies}
+          />
         )}
       </main>
     </div>

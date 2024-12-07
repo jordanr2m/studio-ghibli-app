@@ -5,6 +5,8 @@
 :root {
   --top-section: rgb(149, 239, 119);
   --accent: rgb(35, 117, 35);
+  --film-card: #EEDAFF;
+  ;
 }
 
 * {
@@ -43,6 +45,7 @@ svg.loader {
     transform: rotate(0deg);
     /* putting from 0 is not required here */
   }
+
   to {
     transform: rotate(360deg)
   }
@@ -61,7 +64,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 .App {
@@ -115,10 +119,10 @@ header h1 {
   /* Gives that scrolling effect as the typing happens */
   letter-spacing: .1em;
   /* Adjust as needed */
-  animation: typing 3.5s steps(40, end) forwards; /* Add forward to keep text on page */
+  animation: typing 3.5s steps(40, end) forwards;
+  /* Add forward to keep text on page */
 }
 
-/* The typing effect */
 @keyframes typing {
   from {
     width: 0
@@ -132,6 +136,58 @@ header h1 {
 /* ====== FAVORITE FILMS section styles ====== */
 .favorite-films {
   padding-bottom: 2rem;
+}
+
+/* ====== Search/Sort bar styles ====== */
+.search-nav h2 {
+  margin: 2rem 0;
+}
+
+/* ====== Film section styles ====== */
+.films {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* ====== Film Card styles ====== */
+.film-card {
+  background-color: var(--film-card);
+  border-radius: 26px;
+  font-size: 1.1rem;
+  padding: 2rem;
+  width: 100%;
+  position: relative;
+}
+
+.film-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.film-img img {
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.film-info {
+  text-align: center;
+}
+
+.film-info h3 {
+  margin-top: 1rem;
+}
+
+.film-info span {
+  font-size: 1.1rem;
+  color: rgb(94, 84, 84);
+}
+
+.film-info p {
+  margin: 0.5rem 0;
 }
 
 
