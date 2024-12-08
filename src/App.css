@@ -191,7 +191,8 @@ header h1 {
 
 .film-info span {
   font-size: 1.1rem;
-  color: rgb(94, 84, 84);
+  font-weight: normal;
+  color: rgb(84, 77, 77);
 }
 
 .film-info p {

@@ -7,9 +7,10 @@ const FilmCard = ({ movie }) => {
         let hours = Math.floor(minutes / 60);
         let remainingMinutes = minutes % 60;
         // remainingMinutes = remainingMinutes < 10 ? `0${remainingMinutes}` : remainingMinutes;
-        return `${hours} ${hours > 1 ? "hours" : "hour"} ${remainingMinutes} ${remainingMinutes === 1 ? "minute" : "minutes"}`
-        // return `${hours}:${remainingMinutes}`
+        return `${hours > 0 ? `${hours} ${hours > 1 ? "hours" : "hour"}` : ""} ${remainingMinutes > 0 ? `${remainingMinutes} ${remainingMinutes === 1 ? "minute" : "minutes"}` : ""}`
     }
+
+    // console.log(convertRuntime(61));
 
     return (
         <article className="film-card">
