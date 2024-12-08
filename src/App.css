@@ -138,12 +138,17 @@ header h1 {
   padding-bottom: 2rem;
 }
 
-/* ====== Search/Sort bar styles ====== */
+/* ====== Film section styles ====== */
+.search-img {
+  max-width: 300px;
+  margin: 0 auto -3rem auto;
+}
+
+/* Search/Sort bar styles */
 .search-nav h2 {
   margin: 2rem 0;
 }
 
-/* ====== Film section styles ====== */
 .films {
   display: flex;
   flex-wrap: wrap;

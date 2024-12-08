@@ -1,6 +1,5 @@
 import FilmCard from "./FilmCard"
 
-
 const Films = ({ movies }) => {
   return (
     <section className="all-films">
