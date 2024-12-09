@@ -1,7 +1,18 @@
 import logo from '../imgs/ghibli-logo.png'
 import ghibliNavImg from "../imgs/ghibli-1.png"
+import { useEffect, useState } from 'react';
 
 const Header = ({ setLearnMore }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Fade in glow button
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsVisible(true);
+    }, 4000);
+    return () => window.clearTimeout(timeout);
+  }, []);
+
   return (
     <header>
       <div className="wrapper">
@@ -16,7 +27,12 @@ const Header = ({ setLearnMore }) => {
         {/* Glow Button */}
         <div className='glow-btn-container'>
           <div className='glow'></div>
-          <button className='glow-btn' onClick={() => setLearnMore(true)}>Learn More</button>
+          <button
+            className={`glow-btn fade-in ${isVisible ? "visible" : ""}`}
+            onClick={() => setLearnMore(true)}
+          >
+            Learn More
+          </button>
         </div>
 
         <div className="search-img">

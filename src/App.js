@@ -28,6 +28,7 @@ function App() {
     fetchMovies();
   }, []);
 
+  // Remove Learn More Msg
   const removeMessage = () => {
     setLearnMore(false);
   };
