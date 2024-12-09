@@ -4,10 +4,11 @@ import { FiLoader } from "react-icons/fi";
 import Header from './components/Header';
 import FavoriteFilms from './components/movies/FavoriteFilms';
 import Films from './components/movies/Films';
+import LearnMoreMsg from './components/LearnMoreMsg';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  // console.log(movies);
+  const [learnMore, setLearnMore] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const ghibliUrl = "https://ghibliapi.vercel.app/films";
 
@@ -27,15 +28,26 @@ function App() {
     fetchMovies();
   }, []);
 
+  const removeMessage = () => {
+    setLearnMore(false);
+  };
+
   return (
     <div className="App">
-      <Header/>
+      {learnMore && (
+        <LearnMoreMsg
+          removeMessage={removeMessage}
+        />
+      )}
+      <Header
+        setLearnMore={setLearnMore}
+      />
       <main>
         <FavoriteFilms />
         {isLoading ? (
           <FiLoader className='loader' />
         ) : (
-          <Films 
+          <Films
             movies={movies}
           />
         )}

@@ -91,6 +91,67 @@ footer {
   width: 100%;
 }
 
+/* ==== LearnMoreMessage styles ==== */
+.learn-more-message {
+  position: absolute;
+  /* Shows message regardless of user scrolling down AKA sticky (FIXED) */
+  top: 5vh;
+  /* left: 15%; */
+  /* display: flex;
+  justify-content: space-between; */
+  width: 90%;
+  text-align: center;
+  font-size: 1.25rem;
+  background-color: var(--glow-btn);
+  color: white;
+  border: 2px solid white;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.learn-more-message .source {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.source a {
+  color: var(--glow-ring);
+}
+
+.learn-more-message .close-message {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+}
+
+.learn-more-message .close-message:hover {
+  transform: scale(1.2);
+}
+
+/* Message slide down effect */
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* ====== HEADER styles ====== */
 header {
   padding: 2rem 0 3rem 0
@@ -126,6 +187,7 @@ header h1 {
   border: none;
   letter-spacing: 0.5px;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .glow-btn,
