@@ -275,6 +275,10 @@ header h1 {
   padding-bottom: 2rem;
 }
 
+.favorite-films h2 {
+  padding-top: 1.5rem; /* Prevents btn overlap on page load */
+}
+
 /* ====== Film section styles ====== */
 .search-img {
   max-width: 300px;
