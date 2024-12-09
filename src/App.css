@@ -5,6 +5,8 @@
 :root {
   --top-section: rgb(149, 239, 119);
   --accent: rgb(35, 117, 35);
+  --glow-btn: #C04A52;
+  --glow-ring: #ADBBFF;
   --film-card-1: #EEDAFF;
   --film-card-2: #ADE4FF;
 }
@@ -109,6 +111,79 @@ header h1 {
   margin-top: 2rem;
 }
 
+/* GLOW BUTTON styles */
+.glow-btn-container {
+  min-height: 60px;
+  margin-top: 1.5rem;
+}
+
+.glow-btn {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--glow-btn);
+  border: none;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+}
+
+.glow-btn,
+.glow {
+  position: absolute;
+  /* Center the btn */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  /* */
+  overflow: hidden;
+  z-index: 0;
+  max-height: 50px;
+  max-width: 150px;
+  height: 100%;
+  width: 100%;
+  border-radius: 35px;
+}
+
+.glow-btn:before,
+.glow:before {
+  content: "";
+  width: 99999px;
+  height: 99999px;
+  top: 50%;
+  left: 50%;
+  background-image: conic-gradient(rgba(0, 0, 0, 0), var(--glow-ring), rgba(0, 0, 0, 0) 25%);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: -2;
+  animation: glow 5s linear infinite;
+}
+
+.glow {
+  filter: blur(25px);
+}
+
+.glow-btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  /* left: 2px;
+  top: 2px; */
+  /* Commented out above to change border thickness. Original below both were - 5px */
+  width: calc(100% - 7px);
+  height: calc(100% - 6px);
+  background: var(--glow-btn);
+  border-radius: 35px;
+}
+
+@keyframes glow {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
 .typewriter h1 {
   width: 0;
   overflow: hidden;
@@ -141,7 +216,7 @@ header h1 {
 /* ====== Film section styles ====== */
 .search-img {
   max-width: 300px;
-  margin: 0 auto -3rem auto;
+  margin: -1.25rem auto -3rem auto;
 }
 
 /* Search/Sort bar styles */
@@ -237,7 +312,8 @@ header h1 {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  z-index: 10; /* Need this to overlap whole card */
+  z-index: 10;
+  /* Need this to overlap whole card */
 }
 
 /* .add-favorite:hover svg {
@@ -262,6 +338,11 @@ header h1 {
 @media (prefers-reduced-motion) {
   .typewriter h1 {
     margin: 0 auto;
+    animation: none;
+  }
+
+  .glow-btn:before,
+  .glow:before {
     animation: none;
   }
 }
