@@ -160,6 +160,10 @@ footer {
   }
 }
 
+.msg-img img {
+  margin: 2rem auto 0 auto;
+}
+
 
 /* ====== HEADER styles ====== */
 header {
