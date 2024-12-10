@@ -92,11 +92,21 @@ footer {
 }
 
 /* ==== LearnMoreMessage styles ==== */
+.black-bg {
+  position: fixed; /* Covers entire screen, even when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 29;
+}
+
 .learn-more-message {
   position: absolute;
   /* Shows message regardless of user scrolling down AKA sticky (FIXED) */
   top: 5vh;
-  /* left: 15%; */
+  left: 5%;
   /* display: flex;
   justify-content: space-between; */
   width: 90%;
