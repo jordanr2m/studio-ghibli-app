@@ -122,15 +122,6 @@ footer {
   animation: slide-down 300ms ease-out forwards;
 }
 
-.learn-more-message .source {
-  margin-top: 1.5rem;
-  font-size: 1rem;
-}
-
-.source a {
-  color: var(--glow-ring);
-}
-
 .learn-more-message .close-message {
   position: absolute;
   right: 5px;
@@ -161,7 +152,16 @@ footer {
 }
 
 .msg-img img {
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto 1.5rem auto;
+}
+
+
+.learn-more-message .source {
+  font-size: 1rem;
+}
+
+.source a {
+  color: var(--glow-ring);
 }
 
 
