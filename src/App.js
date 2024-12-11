@@ -5,11 +5,15 @@ import Header from './components/Header';
 import FavoriteFilms from './components/movies/FavoriteFilms';
 import Films from './components/movies/Films';
 import LearnMoreMsg from './components/LearnMoreMsg';
+import SearchBar from './components/movies/SearchBar';
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [learnMore, setLearnMore] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  // Search bar states
+  const [search, setSearch] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
   const ghibliUrl = "https://ghibliapi.vercel.app/films";
 
   const fetchMovies = async () => {
@@ -33,24 +37,30 @@ function App() {
     setLearnMore(false);
   };
 
+  // Filter search results (search bar)
+  useEffect(() => {
+    const filteredResults = movies.filter(movie => (
+      (movie.title).toLowerCase()).includes(search.toLowerCase()
+      )
+    );
+    setSearchResults(filteredResults)
+  }, [movies, search])
+
+
   return (
     <div className="App">
       {learnMore && (
-        <LearnMoreMsg
-          removeMessage={removeMessage}
-        />
+        <LearnMoreMsg removeMessage={removeMessage} />
       )}
-      <Header
-        setLearnMore={setLearnMore}
-      />
+      <Header setLearnMore={setLearnMore} />
+
       <main>
         <FavoriteFilms />
+        <SearchBar search={search} setSearch={setSearch} />
         {isLoading ? (
           <FiLoader className='loader' />
         ) : (
-          <Films
-            movies={movies}
-          />
+          <Films searchResults={searchResults} />
         )}
       </main>
     </div>

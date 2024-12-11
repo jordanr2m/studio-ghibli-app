@@ -1,24 +1,13 @@
-import FilmCard from "./FilmCard"
-import SearchBar from "./SearchBar"
+import FilmsList from "./FilmsList"
 
-const Films = ({ movies }) => {
+const Films = ({ searchResults }) => {
   return (
-    <section className="all-films">
-      <div className="wrapper films">
-        <div className="search-nav">
-          <h2>Search films below</h2>
-          <SearchBar />
-          {/* TO DO: Add filter options Here */}
-        </div>
-
-        {movies.map(movie => (
-          <FilmCard 
-            key={movie.id}
-            movie={movie}
-            // TO DO: add functions for adding to favorites, favorites, and removing from favorites
-          />
-        ))}
-      </div>
+    <section className="all-films wrapper">
+      {searchResults.length ? (
+        <FilmsList searchResults={searchResults} />
+      ) : (
+        <p>Sorry, no films match your search.</p>
+      )}
     </section>
   )
 }
