@@ -185,6 +185,31 @@ header h1 {
   margin-top: 2rem;
 }
 
+/* Typewriter in Effect */
+.typewriter h1 {
+  width: 0;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  /* margin: 0 auto; */
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(40, end) forwards;
+  /* Add forward to keep text on page */
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
 /* GLOW BUTTON styles */
 .glow-btn-container {
   min-height: 60px;
@@ -259,7 +284,7 @@ header h1 {
   }
 }
 
-/* Fade in Effect */
+/* Fade in Button Effect */
 .fade-in {
   opacity: 0;
   transform: translateY(10px);
@@ -271,29 +296,9 @@ header h1 {
   transform: translateY(0);
 }
 
-/* Typewriter in Effect */
-.typewriter h1 {
-  width: 0;
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  /* margin: 0 auto; */
-  /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .1em;
-  /* Adjust as needed */
-  animation: typing 3.5s steps(40, end) forwards;
-  /* Add forward to keep text on page */
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 100%
-  }
+.search-img {
+  max-width: 300px;
+  margin: -1.25rem auto -3rem auto;
 }
 
 /* ====== FAVORITE FILMS section styles ====== */
@@ -305,15 +310,35 @@ header h1 {
   padding-top: 1.5rem; /* Prevents btn overlap on page load */
 }
 
-/* ====== Film section styles ====== */
-.search-img {
-  max-width: 300px;
-  margin: -1.25rem auto -3rem auto;
-}
-
-/* Search/Sort bar styles */
+/* ========= FILM SECTION styles ======== */
+/* ==== Search bar styles ==== */
 .search-nav h2 {
   margin: 2rem 0;
+}
+
+.search-films {
+  display: flex;
+  align-items: center;
+}
+
+.search-films svg {
+  color: var(--glow-btn);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+input#search {
+  margin-left: 0.5rem;
+  /* min-height: 48px; */
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 35px;
+  border: 2px solid var(--glow-btn);
+}
+
+.search-films label {
+  position: absolute;
+  left: -99999px;
 }
 
 .films {

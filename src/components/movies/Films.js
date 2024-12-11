@@ -1,4 +1,5 @@
 import FilmCard from "./FilmCard"
+import SearchBar from "./SearchBar"
 
 const Films = ({ movies }) => {
   return (
@@ -6,7 +7,8 @@ const Films = ({ movies }) => {
       <div className="wrapper films">
         <div className="search-nav">
           <h2>Search films below</h2>
-          {/* TO DO: Add search bar and filter options Here */}
+          <SearchBar />
+          {/* TO DO: Add filter options Here */}
         </div>
 
         {movies.map(movie => (
