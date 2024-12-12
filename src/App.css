@@ -329,12 +329,12 @@ header h1 {
 }
 
 /* ========= FILM SECTION styles ======== */
-/* ==== Search bar styles ==== */
-.search-films h2 {
+/* ==== Search bar & Sort Select styles ==== */
+.search-options h2 {
   margin: 2rem 0;
 }
 
-.search-wrapper {
+.search-films {
   margin-bottom: 2rem;
   display: flex;
   align-items: center;

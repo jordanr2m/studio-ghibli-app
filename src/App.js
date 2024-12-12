@@ -5,7 +5,7 @@ import Header from './components/Header';
 import FavoriteFilms from './components/movies/FavoriteFilms';
 import Films from './components/movies/Films';
 import LearnMoreMsg from './components/LearnMoreMsg';
-import SearchBar from './components/movies/SearchBar';
+import SearchOptions from './components/search-sort/SearchOptions';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -33,7 +33,7 @@ function App() {
     fetchMovies();
   }, []);
 
-  // Filter search results (search bar functionality)
+  // Search bar functionality
   useEffect(() => {
     const filteredResults = movies.filter(movie => (
       (movie.title).toLowerCase()).includes(search.toLowerCase()
@@ -52,11 +52,9 @@ function App() {
 
       <main>
         <FavoriteFilms />
-        <SearchBar
+        <SearchOptions
           search={search}
           setSearch={setSearch}
-          // sortBy={sortBy}
-          // handleSortChange={handleSortChange}
           movies={movies}
           setMovies={setMovies}
         />
