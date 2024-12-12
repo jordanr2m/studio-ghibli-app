@@ -299,6 +299,23 @@ header h1 {
 .search-img {
   max-width: 300px;
   margin: -1.25rem auto -3rem auto;
+  animation: walk 4s ease;
+}
+
+/* Walking movement */
+@keyframes walk {
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 /* ====== FAVORITE FILMS section styles ====== */
@@ -496,6 +513,10 @@ svg.arrow {
 
   .glow-btn:before,
   .glow:before {
+    animation: none;
+  }
+
+  .search-img {
     animation: none;
   }
 }
