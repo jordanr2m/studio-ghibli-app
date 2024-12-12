@@ -14,6 +14,8 @@ function App() {
   // Search bar states
   const [search, setSearch] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  // Sort states
+  // const [sortBy, setSortBy] = useState("Alphabetically");
   const ghibliUrl = "https://ghibliapi.vercel.app/films";
 
   const fetchMovies = async () => {
@@ -37,14 +39,31 @@ function App() {
     setLearnMore(false);
   };
 
-  // Filter search results (search bar)
+  // Filter search results (search bar functionality)
   useEffect(() => {
     const filteredResults = movies.filter(movie => (
       (movie.title).toLowerCase()).includes(search.toLowerCase()
       )
     );
     setSearchResults(filteredResults)
-  }, [movies, search])
+  }, [movies, search]);
+
+
+  // Sorting Logic
+  // const sortData = (option) => {
+  //   const sortedFilms = [...movies].sort((a, b) => (
+  //     a[option].localCompare(b[option])
+  //   ))
+  //   setSearchResults(sortedFilms);
+  //   console.log(sortedFilms);
+  // }
+
+  // Sorting Functionality
+  // const handleSortChange = (e) => {
+  //   const selectedOption = e.target.value;
+  //   setSortBy(selectedOption);
+  //   sortData(selectedOption);
+  // };
 
 
   return (
@@ -56,7 +75,14 @@ function App() {
 
       <main>
         <FavoriteFilms />
-        <SearchBar search={search} setSearch={setSearch} />
+        <SearchBar
+          search={search}
+          setSearch={setSearch}
+          // sortBy={sortBy}
+          // handleSortChange={handleSortChange}
+          movies={movies}
+          setMovies={setMovies}
+        />
         {isLoading ? (
           <FiLoader className='loader' />
         ) : (

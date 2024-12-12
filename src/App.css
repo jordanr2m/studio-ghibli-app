@@ -329,7 +329,8 @@ header h1 {
   height: 1.25rem;
 }
 
-input#search {
+input#search,
+.sort-wrapper select {
   margin-left: 0.4rem;
   /* min-height: 48px; */
   font-size: 1rem;
@@ -350,6 +351,38 @@ input#search {
   /* align-items: center; */
   gap: 2.5rem;
   margin-bottom: 3rem;
+}
+
+/* Sort bar styles */
+.sort-films,
+.sort-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sort-films {
+  margin-bottom: 2rem;
+}
+
+.sort-wrapper {
+  width: 228px;
+}
+
+.sort-wrapper select {
+  width: 100%;
+  background-color: #ffffff;
+  cursor: pointer;
+  /* For custom arrow */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+svg.arrow {
+  position: relative;
+  right: 24px;
+  pointer-events: none;
+  /* Include this so the icon is clickable */
 }
 
 /* ====== Film Card styles ====== */

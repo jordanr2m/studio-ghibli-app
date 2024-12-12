@@ -7,7 +7,7 @@ const FilmsList = ({ searchResults }) => {
       {searchResults.map(movie => (
           <FilmCard 
             key={movie.id}
-            movie={movie}
+            movie={movie} // pass whole movie obj
             // TO DO: add functions for adding to favorites, favorites, and removing from favorites
           />
         ))}
