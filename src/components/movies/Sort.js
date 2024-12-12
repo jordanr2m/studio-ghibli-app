@@ -15,7 +15,7 @@ const Sort = ({ movies, setMovies }) => {
     // const handleSortChange = (e) => {
     //     const selectedOption = e.target.value;
     //     setSortBy(selectedOption);
-    //     // Sort data based on option
+    //     // Sort data Alphabetically ONLY
     //     const sortedMovies = [...movies].sort((a, b) =>
     //         a[selectedOption].localeCompare(b[selectedOption])
     //     );

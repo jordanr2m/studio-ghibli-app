@@ -1,7 +1,7 @@
 import { FaSearch } from "react-icons/fa";
 import Sort from "./Sort";
 
-const SearchBar = ({ search, setSearch, sortBy, movies, setMovies }) => {
+const SearchBar = ({ search, setSearch, movies, setMovies }) => {
     // console.log(search)
     return (
         <>
@@ -22,7 +22,7 @@ const SearchBar = ({ search, setSearch, sortBy, movies, setMovies }) => {
                 </div>
                 {/* TO DO: Add sorting function (make separate component) */}
             </form>
-            <Sort sortBy={sortBy} movies={movies} setMovies={setMovies}/>
+            <Sort movies={movies} setMovies={setMovies}/>
         </>
 
     )
