@@ -20,7 +20,6 @@ const Sort = ({ movies, setMovies }) => {
     //         a[selectedOption].localeCompare(b[selectedOption])
     //     );
     //     setMovies(sortedMovies);
-    //     console.log(sortedMovies);
     // };
 
     const sortMovies = (option) => {
