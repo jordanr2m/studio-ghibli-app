@@ -407,11 +407,10 @@ svg.arrow {
 .film-card {
   border-radius: 26px;
   font-size: 1.1rem;
-  padding: 2rem;
   width: 100%;
   position: relative;
   /* For flipping */
-  height: 560px;
+  height: 580px; /* Must set a height */
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -445,6 +444,10 @@ svg.arrow {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.film-img {
+  padding-top: 2rem;
 }
 
 .film-img img {
@@ -485,7 +488,7 @@ svg.arrow {
 
 .add-favorite {
   text-align: right;
-  margin-top: 1.3rem;
+  margin-top: 2.75rem;
   margin-right: 1.5rem;
 }
 
@@ -510,6 +513,14 @@ svg.arrow {
 }
 
 /* Styles for Back of card content */
+.film-poster img {
+  border-radius: 26px 26px 0 0;
+}
+
+.film-description {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
 
 
 /* ===== MEDIA QUERIES ===== */
