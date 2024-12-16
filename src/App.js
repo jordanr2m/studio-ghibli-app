@@ -6,6 +6,7 @@ import FavoriteFilms from './components/movies/FavoriteFilms';
 import Films from './components/movies/Films';
 import LearnMoreMsg from './components/LearnMoreMsg';
 import SearchOptions from './components/search-sort/SearchOptions';
+import Footer from './components/Footer';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -64,6 +65,7 @@ function App() {
           <Films searchResults={searchResults} />
         )}
       </main>
+      <Footer />
     </div>
   );
 }
