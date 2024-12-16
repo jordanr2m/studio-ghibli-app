@@ -67,17 +67,11 @@ const FilmCard = ({ movie }) => {
             {/* Back of the Card */}
             <div className="card-back">
                 <div className="film-card-content">
-                    <div className="film-img">
-                        <img src={movie.image} alt="Poster for the film" />
+                    <div className="film-poster">
+                        <img src={movie.movie_banner} alt="Banner for the film" />
                     </div>
-                    <div className="film-info">
-                        <h3>{movie.title} <span>({movie.release_date})</span></h3>
-                        <p>Directed by: <b>{movie.director}</b></p>
-                        <p>Runtime: {convertRuntime(movie.running_time)}</p>
-                        <div className="rt-score">
-                            <SiRottentomatoes className="tomatoe-icon" />
-                            <p>{movie.rt_score}%</p>
-                        </div>
+                    <div className="film-description">
+                        <p>{movie.description}</p>
                     </div>
 
                     <footer>
