@@ -9,6 +9,7 @@
   --glow-ring: #a7e690;
   --film-card-1: #EEDAFF;
   --film-card-2: #ADE4FF;
+  --footer: #FF8B97;
 }
 
 * {
@@ -412,6 +413,7 @@ svg.arrow {
   height: 700px; /* Must set a height. This height based on 376px mobile */
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  cursor: pointer;
 }
 
 .film-card.flipped {
@@ -464,7 +466,7 @@ svg.arrow {
 }
 
 .film-info span {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: normal;
   color: rgb(84, 77, 77);
 }
