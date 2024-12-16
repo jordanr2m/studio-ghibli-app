@@ -27,6 +27,7 @@ const FilmCard = ({ movie }) => {
             {/* Front of the Card */}
             <div className="card-front">
                 <div className="film-card-content">
+                    <div className="film-front-container">
                     <div className="film-img">
                         <img src={movie.image} alt="Poster for the film" />
                     </div>
@@ -39,6 +40,8 @@ const FilmCard = ({ movie }) => {
                             <p>{movie.rt_score}%</p>
                         </div>
                     </div>
+                    </div>
+                    
 
                     <footer>
                         <p className=" add-favorite">

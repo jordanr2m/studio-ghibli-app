@@ -406,11 +406,10 @@ svg.arrow {
 /* ====== Film Card styles ====== */
 .film-card {
   border-radius: 26px;
-  font-size: 1.1rem;
   width: 100%;
   position: relative;
   /* For flipping */
-  height: 580px; /* Must set a height */
+  height: 700px; /* Must set a height. This height based on 376px mobile */
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -443,15 +442,14 @@ svg.arrow {
 .film-card-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-.film-img {
-  padding-top: 2rem;
+.film-front-container {
+  padding: 3.25rem 2rem;
 }
 
 .film-img img {
-  max-height: 300px;
+  max-height: 350px;
   margin: 0 auto;
   border: 6px solid white;
 }
@@ -461,7 +459,8 @@ svg.arrow {
 }
 
 .film-info h3 {
-  margin: 1.25rem 0 0.75rem 0;
+  margin: 1.6rem 0 1.1rem 0;
+  font-size: 1.4rem;
 }
 
 .film-info span {
@@ -471,25 +470,25 @@ svg.arrow {
 }
 
 .film-info p {
-  line-height: 1.8rem;
+  margin: 0.5rem 0;
+  font-size: 1.15rem;
 }
 
 .rt-score {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.2rem;
 }
 
 .tomatoe-icon {
   margin-right: 0.35rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .add-favorite {
-  text-align: right;
-  margin-top: 2.75rem;
-  margin-right: 1.5rem;
+  position: absolute;
+  top: 92%;
+  right: 8%;
 }
 
 .add-favorite svg {
