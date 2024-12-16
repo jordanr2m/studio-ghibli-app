@@ -363,15 +363,6 @@ input#search,
   left: -99999px;
 }
 
-.all-films {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* align-items: center; */
-  gap: 2.5rem;
-  margin-bottom: 3rem;
-}
-
 /* Sort bar styles */
 .sort-films,
 .sort-wrapper {
@@ -405,6 +396,21 @@ svg.arrow {
 }
 
 /* ====== Film Card styles ====== */
+.all-films {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.directions {
+  text-align: center;
+  padding-top: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+
 .film-card {
   border-radius: 26px;
   width: 100%;

@@ -8,7 +8,7 @@ const FilmsList = ({ searchResults }) => {
           <FilmCard 
             key={movie.id}
             movie={movie} // pass whole movie obj
-            // TO DO: add functions for adding to favorites, favorites, and removing from favorites
+            // TO DO: add functions for adding to favorites and removing from favorites
           />
         ))}
     </>
