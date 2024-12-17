@@ -1,7 +1,7 @@
 import React from 'react'
 import FilmCard from './FilmCard'
 
-const FilmsList = ({ searchResults, filmsToWatch, addToWatchlist }) => {
+const FilmsList = ({ searchResults, filmsToWatch, addToWatchlist, removeFromWatchlist }) => {
   return (
     <>
       {searchResults.map(movie => (
@@ -10,7 +10,7 @@ const FilmsList = ({ searchResults, filmsToWatch, addToWatchlist }) => {
             movie={movie} // pass whole movie obj
             filmsToWatch={filmsToWatch}
             addToWatchlist={addToWatchlist}
-            // TO DO: add functions for adding to favorites and removing from favorites
+            removeFromWatchlist={removeFromWatchlist}
           />
         ))}
     </>

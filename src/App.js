@@ -7,6 +7,7 @@ import Films from './components/movies/Films';
 import LearnMoreMsg from './components/LearnMoreMsg';
 import SearchOptions from './components/search-sort/SearchOptions';
 import Footer from './components/Footer';
+import WatchListMsg from './components/WatchListMsg';
 
 
 function App() {
@@ -18,7 +19,10 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   // Watchlist states
   const [filmsToWatch, setFilmsToWatch] = useState(JSON.parse(window.localStorage.getItem('watchlist')) || [])
+  const [watchMsgText, setWatchMsgText] = useState("");
+  const [showWatchMsg, setShowWatchMsg] = useState(false);
   const maxWatchlist = 3;
+
   const ghibliUrl = "https://ghibliapi.vercel.app/films";
 
   const fetchMovies = async () => {
@@ -58,15 +62,35 @@ function App() {
 
     if (filmsToWatch.length < maxWatchlist) {
       setFilmsToWatch([selectedFilm, ...filmsToWatch]);
+      setWatchMsgText("This film has been added to your watchlist!");
+      setShowWatchMsg(true);
+    } else {
+      setWatchMsgText("Max number of watchlist films (3) has been reached. Remove one film to add another.")
+      setShowWatchMsg(true);
     }
+  }
+
+  const removeFromWatchlist = (filmId) => {
+    const newWatchlist = filmsToWatch.filter(film => film.id !== filmId);
+    setFilmsToWatch(newWatchlist);
+    setWatchMsgText("This film has been removed from your watchlist.")
+    setShowWatchMsg(true);
   }
 
 
   return (
     <div className="App">
+      {showWatchMsg && (
+        <WatchListMsg
+          setShowWatchMsg={setShowWatchMsg}
+          watchMsgText={watchMsgText}
+        />
+      )}
+
       {learnMore && (
         <LearnMoreMsg setLearnMore={setLearnMore} />
       )}
+
       <Header setLearnMore={setLearnMore} />
 
       <main>
@@ -81,10 +105,11 @@ function App() {
         {isLoading ? (
           <FiLoader className='loader' />
         ) : (
-          <Films 
-          searchResults={searchResults} 
-          filmsToWatch={filmsToWatch}
-          addToWatchlist={addToWatchlist}
+          <Films
+            searchResults={searchResults}
+            filmsToWatch={filmsToWatch}
+            addToWatchlist={addToWatchlist}
+            removeFromWatchlist={removeFromWatchlist}
           />
         )}
       </main>

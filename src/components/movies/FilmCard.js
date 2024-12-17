@@ -1,23 +1,28 @@
 import { SiRottentomatoes } from "react-icons/si";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { useState } from "react";
+import { MdOutlineViewAgenda } from "react-icons/md";
 
-const FilmCard = ({ movie, filmsToWatch, addToWatchlist }) => {
+const FilmCard = ({ movie, filmsToWatch, addToWatchlist, removeFromWatchlist }) => {
     const [isFlipped, setIsFlipped] = useState(false);
     // Disable watchlist button when flipped
     const [btnDisabled, setBtnDisabled] = useState(false);
     // Check if film is already in watchlist
     const alreadyWatchlisted = filmsToWatch.find(film => film.id === movie.id);
-    console.log(alreadyWatchlisted);
 
     const handleFlip = () => {
         setIsFlipped(!isFlipped);
         setBtnDisabled(!btnDisabled);
     }
 
-    const handleWatchlist = (e, movie) => {
+    const handleWatchlistAdd = (e, movie) => {
         e.stopPropagation(); // Prevents card from flipping
         addToWatchlist(movie.id);
+    };
+
+    const handleWatchlistRemove = (e, movie) => {
+        e.stopPropagation(); // Prevents card from flipping
+        removeFromWatchlist(movie.id);
     };
 
     const convertRuntime = (minutes) => {
@@ -59,7 +64,7 @@ const FilmCard = ({ movie, filmsToWatch, addToWatchlist }) => {
                             {alreadyWatchlisted ? (
                                 <button
                                     aria-label="Delete from your watchlist"
-                                    // onClick={(e) => handleWatchlist(e, movie)}
+                                    onClick={(e) => handleWatchlistRemove(e, movie)}
                                     disabled={btnDisabled}
                                 >
                                     <FaStar />
@@ -67,7 +72,7 @@ const FilmCard = ({ movie, filmsToWatch, addToWatchlist }) => {
                             ) : (
                                 <button
                                     aria-label="Add film to your watchlist"
-                                    onClick={(e) => handleWatchlist(e, movie)}
+                                    onClick={(e) => handleWatchlistAdd(e, movie)}
                                     disabled={btnDisabled}
                                 >
                                     <FaRegStar />
