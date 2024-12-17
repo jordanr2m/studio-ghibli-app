@@ -1,6 +1,6 @@
 
 
-const FavoriteFilms = () => {
+const Watchlist = () => {
   return (
     <section className="favorite-films">
       <div className="films-wrapper">
@@ -10,4 +10,4 @@ const FavoriteFilms = () => {
   )
 }
 
-export default FavoriteFilms
+export default Watchlist

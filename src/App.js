@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { FiLoader } from "react-icons/fi";
 import Header from './components/Header';
-import FavoriteFilms from './components/movies/FavoriteFilms';
+import Watchlist from './components/movies/Watchlist';
 import Films from './components/movies/Films';
 import LearnMoreMsg from './components/LearnMoreMsg';
 import SearchOptions from './components/search-sort/SearchOptions';
 import Footer from './components/Footer';
+
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -15,6 +16,9 @@ function App() {
   // Search bar states
   const [search, setSearch] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  // Watchlist states
+  const [filmsToWatch, setFilmsToWatch] = useState(JSON.parse(window.localStorage.getItem('watchlist')) || [])
+  const maxWatchlist = 3;
   const ghibliUrl = "https://ghibliapi.vercel.app/films";
 
   const fetchMovies = async () => {
@@ -43,6 +47,20 @@ function App() {
     setSearchResults(filteredResults)
   }, [movies, search]);
 
+  // Save Watchlist in local storage
+  useEffect(() => {
+    window.localStorage.setItem('watchlist', JSON.stringify(filmsToWatch));
+  }, [filmsToWatch]);
+
+  // Add & remove from Watchlist
+  const addToWatchlist = (filmId) => {
+    const selectedFilm = movies.find(film => film.id === filmId);
+
+    if (filmsToWatch.length < maxWatchlist) {
+      setFilmsToWatch([selectedFilm, ...filmsToWatch]);
+    }
+  }
+
 
   return (
     <div className="App">
@@ -52,7 +70,8 @@ function App() {
       <Header setLearnMore={setLearnMore} />
 
       <main>
-        <FavoriteFilms />
+        {/* {filmsToWatch.length > 0 && <Watchlist /> } */}
+        <Watchlist />
         <SearchOptions
           search={search}
           setSearch={setSearch}
@@ -62,9 +81,14 @@ function App() {
         {isLoading ? (
           <FiLoader className='loader' />
         ) : (
-          <Films searchResults={searchResults} />
+          <Films 
+          searchResults={searchResults} 
+          filmsToWatch={filmsToWatch}
+          addToWatchlist={addToWatchlist}
+          />
         )}
       </main>
+
       <Footer />
     </div>
   );
