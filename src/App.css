@@ -94,7 +94,8 @@ footer {
 
 /* ==== Learn More & Watchlist Message styles ==== */
 .black-bg {
-  position: fixed; /* Covers entire screen, even when scrolling */
+  position: fixed;
+  /* Covers entire screen, even when scrolling */
   top: 0;
   left: 0;
   width: 100%;
@@ -127,7 +128,8 @@ footer {
 }
 
 .watch-message {
-  position: fixed; /* Shows message regardless of user scrolling down AKA sticky */
+  position: fixed;
+  /* Shows message regardless of user scrolling down AKA sticky */
   top: 20vh;
   left: 15%;
   width: 70%;
@@ -318,12 +320,15 @@ header h1 {
   25% {
     transform: rotate(4deg);
   }
+
   50% {
     transform: rotate(-4deg);
   }
+
   75% {
     transform: rotate(4deg);
   }
+
   100% {
     transform: rotate(0);
   }
@@ -331,12 +336,43 @@ header h1 {
 
 
 /* ====== FAVORITE FILMS section styles ====== */
-.favorite-films {
-  padding-bottom: 2rem;
+.watchlist-films {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  background-image: url(../src/imgs/ghibli-3.png);
+  background-size: contain;
 }
 
-.favorite-films h2 {
-  padding-top: 1.5rem; /* Prevents btn overlap on page load */
+.watchlist-films h2,
+.watchlist-description p {
+  background: rgba(255, 255, 255, 0.86);
+  padding: 0.5rem;
+}
+
+.watchlist-films h2 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.watchlist-wrapper ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.watchlist-films .film-card {
+  margin-top: 4.375rem;
+  padding: 1.5rem 0;
+  height: auto;
+}
+
+.watchlist-description p {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 /* ========= FILM SECTION styles ======== */
@@ -426,7 +462,8 @@ svg.arrow {
   width: 100%;
   position: relative;
   /* For flipping */
-  height: 700px; /* Must set a height. This height based on 376px mobile */
+  height: 700px;
+  /* Must set a height. This height based on 376px mobile */
   transition: transform 0.8s;
   transform-style: preserve-3d;
   cursor: pointer;
@@ -434,7 +471,8 @@ svg.arrow {
 }
 
 .film-card.flipped {
-  transform: rotateY(180deg); /* Flip card */
+  transform: rotateY(180deg);
+  /* Flip card */
 }
 
 .card-front,
@@ -443,11 +481,13 @@ svg.arrow {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  left: 0; /* Aligns everything */
+  left: 0;
+  /* Aligns everything */
 }
 
 .card-back {
-  transform: rotateY(180deg); /* Flips content */
+  transform: rotateY(180deg);
+  /* Flips content */
 }
 
 .film-card:nth-child(even) {

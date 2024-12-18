@@ -1,7 +1,6 @@
 import { SiRottentomatoes } from "react-icons/si";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import { useState } from "react";
-import { MdOutlineViewAgenda } from "react-icons/md";
 
 const FilmCard = ({ movie, filmsToWatch, addToWatchlist, removeFromWatchlist }) => {
     const [isFlipped, setIsFlipped] = useState(false);

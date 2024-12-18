@@ -94,14 +94,20 @@ function App() {
       <Header setLearnMore={setLearnMore} />
 
       <main>
-        {/* {filmsToWatch.length > 0 && <Watchlist /> } */}
-        <Watchlist />
+        {filmsToWatch.length > 0 && (
+          <Watchlist
+            filmsToWatch={filmsToWatch}
+            maxWatchlist={maxWatchlist}
+            removeFromWatchlist={removeFromWatchlist}
+          />)}
+
         <SearchOptions
           search={search}
           setSearch={setSearch}
           movies={movies}
           setMovies={setMovies}
         />
+
         {isLoading ? (
           <FiLoader className='loader' />
         ) : (

@@ -6,7 +6,7 @@ const WatchListMsg = ({ setShowWatchMsg, watchMsgText }) => {
         setShowWatchMsg(false);
     }
 
-    // Remove msg after 2s
+    // Remove msg after 2.5s
     useEffect(() => {
         const messageTimeout = window.setTimeout(() => {
             removeMsg();
