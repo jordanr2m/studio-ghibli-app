@@ -65,7 +65,7 @@ function App() {
       setWatchMsgText("This film has been added to your watchlist!");
       setShowWatchMsg(true);
     } else {
-      setWatchMsgText("Max number of watchlist films (3) has been reached. Remove one film to add another.")
+      setWatchMsgText("Max number of watchlist films (3) reached. Remove one to add another.")
       setShowWatchMsg(true);
     }
   }

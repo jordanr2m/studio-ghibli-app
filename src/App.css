@@ -430,6 +430,7 @@ svg.arrow {
   transition: transform 0.8s;
   transform-style: preserve-3d;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .film-card.flipped {
@@ -507,8 +508,6 @@ svg.arrow {
   position: absolute;
   top: 92%;
   right: 8%;
-  /* Bring it above card flip */
-  z-index: 10;
 }
 
 .add-watchlist svg {
@@ -569,7 +568,7 @@ footer.site-footer {
   }
 }
 
-/* Turn off typewriter animation */
+/* Turn off ALL animations */
 @media (prefers-reduced-motion) {
   .typewriter h1 {
     margin: 0 auto;
