@@ -148,7 +148,23 @@ footer {
   border: none;
 }
 
-.close-message:hover {
+.close-film {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 0;
+  cursor: pointer;
+  color: #ad7000;
+  background: transparent;
+  border: none;
+  transition: 0.1s;
+  font-size: 1.6rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.close-message:hover,
+.close-film:hover {
   transform: scale(1.2);
 }
 
@@ -337,7 +353,7 @@ header h1 {
 
 /* ====== FAVORITE FILMS section styles ====== */
 .watchlist-films {
-  padding: 2rem 0;
+  padding: 3rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -348,12 +364,12 @@ header h1 {
 
 .watchlist-films h2,
 .watchlist-description p {
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.858);
   padding: 0.5rem;
+  border-radius: 12px;
 }
 
 .watchlist-films h2 {
-  margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -363,14 +379,39 @@ header h1 {
 }
 
 .watchlist-films .film-card {
-  margin-top: 4.375rem;
-  padding: 1.5rem 0;
+  margin-top: 3.75rem;
+  padding: 3rem 2rem 2rem 2rem;
   height: auto;
+}
+
+.watchlist-films .film-card::before {
+  content: "#" attr(data-list-position);
+  /* Shows # */
+  padding: 0 1.25rem;
+  position: absolute;
+  top: -20px;
+  /* Center number */
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  /* height: 20px; */
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 2.25rem;
+  /* line-height: 20px; */
+  font-weight: 700;
+  background-color: #ffe7a8;
+}
+
+.watchlist-films .film-img img {
+  height: 300px;
 }
 
 .watchlist-description p {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-weight: bold;
   font-size: 1.1rem;
 }
@@ -496,6 +537,11 @@ svg.arrow {
 
 .film-card:nth-child(odd) {
   background-color: var(--film-card-2);
+}
+
+/* Color for Watchlist Film Cards */
+.watchlist-films .film-card {
+  background-color: var(--footer);
 }
 
 .film-card-content {
