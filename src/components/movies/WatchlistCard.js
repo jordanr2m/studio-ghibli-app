@@ -10,13 +10,13 @@ const WatchlistCard = ({ movie, listPosition, removeFromWatchlist }) => {
     return `${hours} ${remainingMinutes}`;
   }
 
-  console.log(movie)
+  // console.log(movie)
 
   return (
     <li className="film-card" data-list-position={listPosition}>
       <button
         className="close-film"
-        aria-label="Delete from favorites"
+        aria-label="Delete from watchlist"
         onClick={() => removeFromWatchlist(movie.id)}
       >
         <IoClose />

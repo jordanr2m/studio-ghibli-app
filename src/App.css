@@ -377,8 +377,8 @@ header h1 {
 }
 
 .watchlist-films .film-card::before {
+  /* Shows # of favorite */
   content: "#" attr(data-list-position);
-  /* Shows # */
   padding: 0 1.25rem;
   position: absolute;
   top: -20px;
@@ -388,11 +388,9 @@ header h1 {
   margin-right: auto;
   left: 0;
   right: 0;
-  text-align: center;
-  /* height: 20px; */
+  /* text-align: center; */
   font-family: "Sour Gummy", sans-serif;
   font-size: 2.25rem;
-  /* line-height: 20px; */
   font-weight: 700;
   background-color: #ffe7a8;
 }
@@ -403,7 +401,7 @@ header h1 {
 
 .watchlist-description p {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   font-weight: bold;
   font-size: 1.1rem;
 }

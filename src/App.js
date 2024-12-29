@@ -61,7 +61,7 @@ function App() {
     const selectedFilm = movies.find(film => film.id === filmId);
 
     if (filmsToWatch.length < maxWatchlist) {
-      setFilmsToWatch([selectedFilm, ...filmsToWatch]);
+      setFilmsToWatch([...filmsToWatch, selectedFilm]);
       setWatchMsgText("This film has been added to your watchlist!");
       setShowWatchMsg(true);
     } else {
@@ -76,7 +76,6 @@ function App() {
     setWatchMsgText("This film has been removed from your watchlist.")
     setShowWatchMsg(true);
   }
-
 
   return (
     <div className="App">
@@ -99,7 +98,8 @@ function App() {
             filmsToWatch={filmsToWatch}
             maxWatchlist={maxWatchlist}
             removeFromWatchlist={removeFromWatchlist}
-          />)}
+          />
+        )}
 
         <SearchOptions
           search={search}
