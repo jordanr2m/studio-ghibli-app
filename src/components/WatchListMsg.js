@@ -6,12 +6,22 @@ const WatchListMsg = ({ setShowWatchMsg, watchMsgText }) => {
         setShowWatchMsg(false);
     }
 
-    // Remove msg after 2.5s
+    console.log(watchMsgText.length);
+
     useEffect(() => {
-        const messageTimeout = window.setTimeout(() => {
-            removeMsg();
-        }, 2500);
-        return () => window.clearTimeout(messageTimeout);
+        if (watchMsgText.length > 50) {
+            // Remove msg after 3s
+            const longMessageTimeout = window.setTimeout(() => {
+                removeMsg();
+            }, 3000);
+            return () => window.clearTimeout(longMessageTimeout);
+        } else {
+            // Remove msg after 1.5s
+            const shortMessageTimeout = window.setTimeout(() => {
+                removeMsg();
+            }, 1500);
+            return () => window.clearTimeout(shortMessageTimeout);
+        }
     });
 
     return (

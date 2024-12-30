@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { SiRottentomatoes } from "react-icons/si";
 import { FaRegStar, FaStar } from "react-icons/fa";
-import { useState } from "react";
 
 const FilmCard = ({ movie, filmsToWatch, addToWatchlist, removeFromWatchlist }) => {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -32,8 +32,6 @@ const FilmCard = ({ movie, filmsToWatch, addToWatchlist, removeFromWatchlist }) 
         remainingMinutes = remainingMinutes > 0 ? `${remainingMinutes} ${remainingMinutes === 1 ? "minute" : "minutes"}` : "";
         return `${hours} ${remainingMinutes}`;
     }
-
-    // console.log(convertRuntime(12));
 
     return (
         <article className={`film-card ${isFlipped ? 'flipped' : ''}`}
