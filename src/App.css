@@ -3,13 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --top-section: rgb(149, 239, 119);
+  --header-footer: rgb(149, 239, 119);
   --accent: rgb(35, 117, 35);
   --glow-btn: #24836c;
   --glow-ring: #a7e690;
   --film-card-1: #EEDAFF;
   --film-card-2: #ADE4FF;
-  --footer: #FF8B97;
+  --watchlist-card: #FF8B97;
 }
 
 * {
@@ -193,7 +193,7 @@ header {
 
 header,
 .favorite-films {
-  background-color: var(--top-section);
+  background-color: var(--header-footer);
 }
 
 .logo-wrapper {
@@ -555,7 +555,7 @@ svg.arrow {
 
 /* Color for Watchlist Film Cards */
 .watchlist-films .film-card {
-  background-color: var(--footer);
+  background-color: var(--watchlist-card);
 }
 
 .film-card-content {
@@ -644,14 +644,10 @@ svg.arrow {
 footer.site-footer {
   text-align: center;
   padding: 1rem;
-  background-color: var(--footer);
+  background-color: var(--header-footer);
 }
 
 .site-footer a {
-  color: white;
-}
-
-.site-footer a:visited {
   color: black;
 }
 
