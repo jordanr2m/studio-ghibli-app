@@ -1,6 +1,6 @@
+import { useEffect, useState } from 'react';
 import logo from '../imgs/ghibli-logo.png'
 import ghibliNavImg from "../imgs/ghibli-1.png"
-import { useEffect, useState } from 'react';
 
 const Header = ({ setLearnMore }) => {
   const [isVisible, setIsVisible] = useState(false);

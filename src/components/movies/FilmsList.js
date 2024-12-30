@@ -1,4 +1,3 @@
-import React from 'react'
 import FilmCard from './FilmCard'
 
 const FilmsList = ({ searchResults, filmsToWatch, addToWatchlist, removeFromWatchlist }) => {

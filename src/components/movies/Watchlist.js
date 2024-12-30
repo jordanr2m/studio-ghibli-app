@@ -1,6 +1,5 @@
 import WatchlistCard from "./WatchlistCard";
 
-
 const Watchlist = ({ filmsToWatch, maxWatchlist, removeFromWatchlist }) => {
   const remainingWatchlist = maxWatchlist - filmsToWatch.length;
 

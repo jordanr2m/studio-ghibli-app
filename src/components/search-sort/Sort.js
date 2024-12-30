@@ -10,17 +10,6 @@ const Sort = ({ movies, setMovies }) => {
     moviesToSort.forEach(movie => {
         movie.rt_score = Number(movie.rt_score)
     });
-    // console.log(moviesToSort);
-
-    // const handleSortChange = (e) => {
-    //     const selectedOption = e.target.value;
-    //     setSortBy(selectedOption);
-    //     // Sort data Alphabetically ONLY
-    //     const sortedMovies = [...movies].sort((a, b) =>
-    //         a[selectedOption].localeCompare(b[selectedOption])
-    //     );
-    //     setMovies(sortedMovies);
-    // };
 
     const sortMovies = (option) => {
         const sortedMovies = [...moviesToSort].sort((a, b) => {

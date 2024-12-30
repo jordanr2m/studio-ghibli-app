@@ -506,6 +506,12 @@ svg.arrow {
   margin-bottom: -0.5rem;
 }
 
+.no-match {
+  color: red;
+  border: 2px dashed red;
+  padding: 1rem;
+}
+
 .film-card {
   border-radius: 26px;
   width: 100%;
