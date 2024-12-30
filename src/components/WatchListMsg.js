@@ -4,9 +4,7 @@ import { IoClose } from "react-icons/io5";
 const WatchListMsg = ({ setShowWatchMsg, watchMsgText }) => {
     const removeMsg = () => {
         setShowWatchMsg(false);
-    }
-
-    console.log(watchMsgText.length);
+    };
 
     useEffect(() => {
         if (watchMsgText.length > 50) {

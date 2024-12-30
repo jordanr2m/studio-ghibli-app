@@ -292,7 +292,7 @@ header h1 {
   z-index: -1;
   /* left: 2px;
   top: 2px; */
-  /* Commented out above to change border thickness. Original below both were - 5px */
+  /* Commented out above to change border thickness */
   width: calc(100% - 7px);
   height: calc(100% - 6px);
   background: var(--glow-btn);
