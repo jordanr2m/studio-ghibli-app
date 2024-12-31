@@ -12,7 +12,7 @@ const FilmCard = ({ movie, filmsToWatch, addToWatchlist, removeFromWatchlist }) 
     const handleFlip = () => {
         setIsFlipped(!isFlipped);
         setBtnDisabled(!btnDisabled);
-    }
+    };
 
     const handleWatchlistAdd = (e, movie) => {
         e.stopPropagation(); // Prevents card from flipping
@@ -20,7 +20,7 @@ const FilmCard = ({ movie, filmsToWatch, addToWatchlist, removeFromWatchlist }) 
     };
 
     const handleWatchlistRemove = (e, movie) => {
-        e.stopPropagation(); // Prevents card from flipping
+        e.stopPropagation();
         removeFromWatchlist(movie.id);
     };
 
@@ -31,7 +31,7 @@ const FilmCard = ({ movie, filmsToWatch, addToWatchlist, removeFromWatchlist }) 
         hours = hours > 0 ? `${hours} ${hours === 1 ? "hour" : "hours"}` : "";
         remainingMinutes = remainingMinutes > 0 ? `${remainingMinutes} ${remainingMinutes === 1 ? "minute" : "minutes"}` : "";
         return `${hours} ${remainingMinutes}`;
-    }
+    };
 
     return (
         <article className={`film-card ${isFlipped ? 'flipped' : ''}`}

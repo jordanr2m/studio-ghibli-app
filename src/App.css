@@ -361,8 +361,8 @@ header h1 {
 
 .watchlist-films h2,
 .watchlist-description p {
-  background: rgba(255, 255, 255, 0.858);
-  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.899);
+  padding: 0.5rem 0;
   border-radius: 12px;
 }
 
@@ -387,7 +387,7 @@ header h1 {
   position: absolute;
   /* Adjusted top padding and top property to account for zig zags */
   padding: 0.5rem 0.9rem;
-  top: -32px;
+  top: -30px;
   /* Center number (something positioned with absolute */
   width: 40px;
   margin-left: auto;
@@ -396,7 +396,7 @@ header h1 {
   right: 0;
   /* text-align: center; */
   font-family: "Sour Gummy", sans-serif;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 700;
   background-color: #ffe7a8;
   /* ZIG-ZAG Borders (6px represents size of zig zags) */
@@ -522,7 +522,7 @@ svg.arrow {
   width: 100%;
   position: relative;
   /* For flipping */
-  height: 700px;
+  height: 680px;
   /* Must set a height. This height based on 376px mobile */
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -547,7 +547,7 @@ svg.arrow {
 
 .card-back {
   transform: rotateY(180deg);
-  /* Flips content */
+  /* Flips card content */
 }
 
 .film-card:nth-child(even) {
@@ -573,7 +573,7 @@ svg.arrow {
 }
 
 .film-img img {
-  max-height: 350px;
+  max-height: 330px;
   margin: 0 auto;
   border: 6px solid white;
 }
@@ -641,7 +641,7 @@ svg.arrow {
 }
 
 .film-description {
-  padding: 1rem 2rem;
+  padding: 1rem 1.8rem;
   font-size: 1rem;
 }
 
