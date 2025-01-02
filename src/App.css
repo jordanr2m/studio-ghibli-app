@@ -364,6 +364,19 @@ header h1 {
   background: rgba(255, 255, 255, 0.899);
   padding: 0.5rem 0;
   border-radius: 12px;
+  width: 70%;
+}
+
+.watchlist-films h2 {
+  margin: 0 auto;
+}
+
+.watchlist-description p {
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 3rem auto 0 auto;
 }
 
 .watchlist-wrapper ul {
@@ -423,13 +436,6 @@ header h1 {
 
 .watchlist-films .film-img img {
   height: 300px;
-}
-
-.watchlist-description p {
-  text-align: center;
-  margin-top: 3rem;
-  font-weight: bold;
-  font-size: 1.1rem;
 }
 
 /* ========= FILM SECTION styles ======== */
@@ -662,7 +668,7 @@ footer.site-footer {
 
 /* ===== MEDIA QUERIES ===== */
 /* Tablet Styles */
-@media (min-width: 590px) {
+@media (min-width: 800px) {
   .logo-wrapper {
     width: 30%;
   }
@@ -673,6 +679,14 @@ footer.site-footer {
 
   h2 {
     font-size: 2rem;
+  }
+
+  .search-img {
+    max-width: 350px;
+  }
+
+  .watchlist-description p {
+    font-size: 1.3rem;
   }
 
   .all-films {
