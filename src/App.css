@@ -686,6 +686,14 @@ footer.site-footer {
     max-width: 350px;
   }
 
+  .search-options h2 {
+    margin: 4rem 0;
+  }
+
+  .directions {
+    margin: 2rem 0;
+  }
+
   .watchlist-description,
   .directions {
     font-size: 1.25rem;
@@ -706,10 +714,6 @@ footer.site-footer {
   .sort-wrapper select {
     padding: 0.6rem 0.8rem;
     margin-left: 0.5rem;
-  }
-
-  .search-options h2 {
-    margin: 4rem 0;
   }
 
   .all-films {
