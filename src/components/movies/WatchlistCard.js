@@ -29,7 +29,7 @@ const WatchlistCard = ({ movie, listPosition, removeFromWatchlist }) => {
         <p>Runtime: {convertRuntime(movie.running_time)}</p>
         <div className="rt-score">
           <SiRottentomatoes className="tomatoe-icon" />
-          <p>{movie.rt_score}%</p>
+          <p className="score">{movie.rt_score}%</p>
         </div>
       </div>
     </li>

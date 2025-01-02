@@ -4,6 +4,7 @@
 
 :root {
   --header-footer: rgb(149, 239, 119);
+  --body: 	#fef1f8;
   --accent: rgb(35, 117, 35);
   --glow-btn: #24836c;
   --glow-ring: #a7e690;
@@ -27,6 +28,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--body);
 }
 
 img,
@@ -357,6 +359,7 @@ header h1 {
   position: relative;
   background-image: url(../src/imgs/ghibli-3.png);
   background-size: contain;
+  background-color: white;
 }
 
 .watchlist-films h2,
@@ -538,7 +541,7 @@ svg.arrow {
   transition: transform 0.8s;
   transform-style: preserve-3d;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .film-card.flipped {
@@ -607,6 +610,11 @@ svg.arrow {
 .film-info p {
   margin: 0.5rem 0;
   font-size: 1.15rem;
+}
+
+/* Remove margin for rt score on watchlist cards */
+p.score {
+  margin: 0;
 }
 
 .rt-score {
