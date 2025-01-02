@@ -704,9 +704,7 @@ footer.site-footer {
     justify-content: space-around;
   }
 
-  .options-wrapper label,
-  input#search,
-  .sort-wrapper select {
+  .options-wrapper label {
     font-size: 1.15rem;
   }
 
@@ -714,6 +712,11 @@ footer.site-footer {
   .sort-wrapper select {
     padding: 0.6rem 0.8rem;
     margin-left: 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  svg.arrow {
+    right: 26px;
   }
 
   .all-films {
