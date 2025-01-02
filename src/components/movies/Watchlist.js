@@ -19,11 +19,9 @@ const Watchlist = ({ filmsToWatch, maxWatchlist, removeFromWatchlist }) => {
         </ul>
 
         {filmsToWatch.length < maxWatchlist && (
-          <div className="watchlist-description">
-            <p>
-              You can add {remainingWatchlist === 1 ? "" : "up to "} {remainingWatchlist} more {remainingWatchlist === 1 ? "film" : "films"} to your watchlist.
-            </p>
-          </div>
+          <p className="watchlist-description">
+            You can add {remainingWatchlist === 1 ? "" : "up to "} {remainingWatchlist} more {remainingWatchlist === 1 ? "film" : "films"} to your watchlist.
+          </p>
         )}
       </div>
     </section>

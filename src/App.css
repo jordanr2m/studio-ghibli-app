@@ -360,7 +360,7 @@ header h1 {
 }
 
 .watchlist-films h2,
-.watchlist-description p {
+.watchlist-description {
   background: rgba(255, 255, 255, 0.899);
   padding: 0.5rem 0;
   border-radius: 12px;
@@ -371,7 +371,7 @@ header h1 {
   margin: 0 auto;
 }
 
-.watchlist-description p {
+.watchlist-description {
   text-align: center;
   margin-top: 3rem;
   font-weight: bold;
@@ -465,6 +465,7 @@ input#search,
   padding: 0.4rem 0.6rem;
   border-radius: 35px;
   border: 2px solid var(--glow-btn);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .17);
 }
 
 .search-films label {
@@ -685,8 +686,30 @@ footer.site-footer {
     max-width: 350px;
   }
 
-  .watchlist-description p {
-    font-size: 1.3rem;
+  .watchlist-description,
+  .directions {
+    font-size: 1.25rem;
+  }
+
+  .options-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .options-wrapper label,
+  input#search,
+  .sort-wrapper select {
+    font-size: 1.15rem;
+  }
+
+  input#search,
+  .sort-wrapper select {
+    padding: 0.6rem 0.8rem;
+    margin-left: 0.5rem;
+  }
+
+  .search-options h2 {
+    margin: 4rem 0;
   }
 
   .all-films {

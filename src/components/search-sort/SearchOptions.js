@@ -3,7 +3,7 @@ import Sort from "./Sort";
 
 const SearchOptions = ({ search, setSearch, movies, setMovies }) => {
     return (
-        <div className="search-options">
+        <div className="search-options wrapper">
             <h2>Browse films below</h2>
             <div className="options-wrapper">
                 <Search search={search} setSearch={setSearch} />
