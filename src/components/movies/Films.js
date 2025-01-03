@@ -1,6 +1,6 @@
 import FilmsList from "./FilmsList"
 
-const Films = ({ searchResults, filmsToWatch, addToWatchlist, removeFromWatchlist }) => {
+const Films = ({ searchResults, filmsToWatch, addToWatchlist, removeFromWatchlist, convertRuntime }) => {
   return (
     <section className="all-films wrapper">
       {searchResults.length ? (
@@ -11,6 +11,7 @@ const Films = ({ searchResults, filmsToWatch, addToWatchlist, removeFromWatchlis
             filmsToWatch={filmsToWatch}
             addToWatchlist={addToWatchlist}
             removeFromWatchlist={removeFromWatchlist}
+            convertRuntime={convertRuntime}
           />
         </>
 

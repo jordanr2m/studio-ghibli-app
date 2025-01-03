@@ -1,14 +1,7 @@
 import { SiRottentomatoes } from "react-icons/si";
 import { IoClose } from "react-icons/io5";
 
-const WatchlistCard = ({ movie, listPosition, removeFromWatchlist }) => {
-  const convertRuntime = (minutes) => {
-    let hours = Math.floor(minutes / 60);
-    let remainingMinutes = minutes % 60;
-    hours = hours > 0 ? `${hours} ${hours === 1 ? "hour" : "hours"}` : "";
-    remainingMinutes = remainingMinutes > 0 ? `${remainingMinutes} ${remainingMinutes === 1 ? "minute" : "minutes"}` : "";
-    return `${hours} ${remainingMinutes}`;
-  }
+const WatchlistCard = ({ movie, listPosition, removeFromWatchlist, convertRuntime }) => {
 
   return (
     <li className="film-card" data-list-position={listPosition}>

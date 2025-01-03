@@ -1,6 +1,6 @@
 import FilmCard from './FilmCard'
 
-const FilmsList = ({ searchResults, filmsToWatch, addToWatchlist, removeFromWatchlist }) => {
+const FilmsList = ({ searchResults, filmsToWatch, addToWatchlist, removeFromWatchlist, convertRuntime }) => {
   return (
     <>
       {searchResults.map(movie => (
@@ -10,6 +10,7 @@ const FilmsList = ({ searchResults, filmsToWatch, addToWatchlist, removeFromWatc
             filmsToWatch={filmsToWatch}
             addToWatchlist={addToWatchlist}
             removeFromWatchlist={removeFromWatchlist}
+            convertRuntime={convertRuntime}
           />
         ))}
     </>

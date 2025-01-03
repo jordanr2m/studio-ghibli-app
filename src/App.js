@@ -70,6 +70,15 @@ function App() {
     }
   }
 
+  const convertRuntime = (minutes) => {
+    let hours = Math.floor(minutes / 60);
+    let remainingMinutes = minutes % 60;
+    // remainingMinutes = remainingMinutes < 10 ? `0${remainingMinutes}` : remainingMinutes;
+    hours = hours > 0 ? `${hours} ${hours === 1 ? "hour" : "hours"}` : "";
+    remainingMinutes = remainingMinutes > 0 ? `${remainingMinutes} ${remainingMinutes === 1 ? "minute" : "minutes"}` : "";
+    return `${hours} ${remainingMinutes}`;
+  };
+
   const removeFromWatchlist = (filmId) => {
     const newWatchlist = filmsToWatch.filter(film => film.id !== filmId);
     setFilmsToWatch(newWatchlist);
@@ -98,6 +107,7 @@ function App() {
             filmsToWatch={filmsToWatch}
             maxWatchlist={maxWatchlist}
             removeFromWatchlist={removeFromWatchlist}
+            convertRuntime={convertRuntime}
           />
         )}
 
@@ -116,6 +126,7 @@ function App() {
             filmsToWatch={filmsToWatch}
             addToWatchlist={addToWatchlist}
             removeFromWatchlist={removeFromWatchlist}
+            convertRuntime={convertRuntime}
           />
         )}
       </main>

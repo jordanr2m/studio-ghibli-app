@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SiRottentomatoes } from "react-icons/si";
 import { FaRegStar, FaStar } from "react-icons/fa";
 
-const FilmCard = ({ movie, filmsToWatch, addToWatchlist, removeFromWatchlist }) => {
+const FilmCard = ({ movie, filmsToWatch, addToWatchlist, removeFromWatchlist, convertRuntime }) => {
     const [isFlipped, setIsFlipped] = useState(false);
     // Disable watchlist button when flipped
     const [btnDisabled, setBtnDisabled] = useState(false);
@@ -22,15 +22,6 @@ const FilmCard = ({ movie, filmsToWatch, addToWatchlist, removeFromWatchlist }) 
     const handleWatchlistRemove = (e, movie) => {
         e.stopPropagation();
         removeFromWatchlist(movie.id);
-    };
-
-    const convertRuntime = (minutes) => {
-        let hours = Math.floor(minutes / 60);
-        let remainingMinutes = minutes % 60;
-        // remainingMinutes = remainingMinutes < 10 ? `0${remainingMinutes}` : remainingMinutes;
-        hours = hours > 0 ? `${hours} ${hours === 1 ? "hour" : "hours"}` : "";
-        remainingMinutes = remainingMinutes > 0 ? `${remainingMinutes} ${remainingMinutes === 1 ? "minute" : "minutes"}` : "";
-        return `${hours} ${remainingMinutes}`;
     };
 
     return (
