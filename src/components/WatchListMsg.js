@@ -8,16 +8,16 @@ const WatchListMsg = ({ setShowWatchMsg, watchMsgText }) => {
 
     useEffect(() => {
         if (watchMsgText.length > 50) {
-            // Remove msg after 3s
+            // Remove msg after 3.5s
             const longMessageTimeout = window.setTimeout(() => {
                 removeMsg();
-            }, 3000);
+            }, 3500);
             return () => window.clearTimeout(longMessageTimeout);
         } else {
-            // Remove msg after 1.5s
+            // Remove msg after 2s
             const shortMessageTimeout = window.setTimeout(() => {
                 removeMsg();
-            }, 1500);
+            }, 2000);
             return () => window.clearTimeout(shortMessageTimeout);
         }
     });

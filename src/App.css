@@ -122,22 +122,23 @@ footer {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
+  /* Center w position:absolute */
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 
 .learn-more-message {
   position: absolute;
   top: 5vh;
-  left: 5%;
-  /* display: flex;
-  justify-content: space-between; */
   width: 90%;
+  max-width: 800px;
 }
 
 .watch-message {
   position: fixed;
   /* Shows message regardless of user scrolling down AKA sticky */
   top: 20vh;
-  left: 15%;
   width: 70%;
   padding: 3rem 1.5rem;
 }
@@ -573,7 +574,6 @@ svg.arrow {
   background-color: var(--film-card-2);
 }
 
-
 /* Color for Watchlist Film Cards */
 .watchlist-films .film-card {
   background-color: var(--watchlist-card);
@@ -693,6 +693,10 @@ footer.site-footer {
     font-size: 2rem;
   }
 
+  .learn-more-message {
+    padding: 3.5rem 2rem 1.75rem 2rem;
+  }
+
   .search-img {
     max-width: 350px;
   }
@@ -707,6 +711,14 @@ footer.site-footer {
 
   .watchlist-films {
     padding: 4rem 0;
+  }
+
+  .watchlist-wrapper ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
   }
 
   .watchlist-films h2 {
@@ -753,15 +765,27 @@ footer.site-footer {
 @media (min-width: 1400px) {
   .typewriter h1 {
     font-size: 3rem;
+    margin: 2.5rem 0 2rem 0;
+  }
+
+  .search-img {
+    margin: 0.25rem auto -2rem auto;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  .learn-more-message {
+    font-size: 1.5rem;
   }
 
   .all-films {
     justify-content: space-between;
   }
 
-
   /* Add this to center last card in row */
-  .film-card:last-of-type {
+  .all-films .film-card:last-of-type {
     margin: 0 auto;
   }
 }
