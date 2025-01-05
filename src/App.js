@@ -15,7 +15,7 @@ function App() {
   const [learnMore, setLearnMore] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   // Search bar states
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   // Watchlist states
   const [filmsToWatch, setFilmsToWatch] = useState(JSON.parse(window.localStorage.getItem('watchlist')) || [])
@@ -56,7 +56,6 @@ function App() {
     window.localStorage.setItem('watchlist', JSON.stringify(filmsToWatch));
   }, [filmsToWatch]);
 
-  // Add & remove from Watchlist
   const addToWatchlist = (filmId) => {
     const selectedFilm = movies.find(film => film.id === filmId);
 
@@ -68,15 +67,6 @@ function App() {
       setWatchMsgText("Max number of watchlist films (3) reached. Remove one to add another.")
       setShowWatchMsg(true);
     }
-  }
-
-  const convertRuntime = (minutes) => {
-    let hours = Math.floor(minutes / 60);
-    let remainingMinutes = minutes % 60;
-    // remainingMinutes = remainingMinutes < 10 ? `0${remainingMinutes}` : remainingMinutes;
-    hours = hours > 0 ? `${hours} ${hours === 1 ? "hour" : "hours"}` : "";
-    remainingMinutes = remainingMinutes > 0 ? `${remainingMinutes} ${remainingMinutes === 1 ? "minute" : "minutes"}` : "";
-    return `${hours} ${remainingMinutes}`;
   };
 
   const removeFromWatchlist = (filmId) => {
@@ -84,7 +74,15 @@ function App() {
     setFilmsToWatch(newWatchlist);
     setWatchMsgText("This film has been removed from your watchlist.")
     setShowWatchMsg(true);
-  }
+  };
+
+  const convertRuntime = (minutes) => {
+    let hours = Math.floor(minutes / 60);
+    let remainingMinutes = minutes % 60;
+    hours = hours > 0 ? `${hours} ${hours === 1 ? "hour" : "hours"}` : "";
+    remainingMinutes = remainingMinutes > 0 ? `${remainingMinutes} ${remainingMinutes === 1 ? "minute" : "minutes"}` : "";
+    return `${hours} ${remainingMinutes}`;
+  };
 
   return (
     <div className="App">
