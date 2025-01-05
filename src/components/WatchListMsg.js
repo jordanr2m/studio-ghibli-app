@@ -14,10 +14,10 @@ const WatchListMsg = ({ setShowWatchMsg, watchMsgText }) => {
             }, 3500);
             return () => window.clearTimeout(longMessageTimeout);
         } else {
-            // Remove msg after 2s
+            // Remove msg after 1.8s
             const shortMessageTimeout = window.setTimeout(() => {
                 removeMsg();
-            }, 2000);
+            }, 1800);
             return () => window.clearTimeout(shortMessageTimeout);
         }
     });

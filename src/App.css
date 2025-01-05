@@ -365,10 +365,11 @@ header h1 {
 
 .watchlist-films h2,
 .watchlist-description {
-  background: rgba(255, 255, 255, 0.899);
-  padding: 0.5rem 0;
+  /* background: rgba(255, 255, 255, 0.899); */
+  background-color: white;
+  max-width: fit-content;
   border-radius: 12px;
-  width: 70%;
+  padding: 1rem;
 }
 
 .watchlist-films h2 {
@@ -377,8 +378,6 @@ header h1 {
 
 .watchlist-description {
   text-align: center;
-  margin-top: 3rem;
-  font-weight: bold;
   font-size: 1.1rem;
   margin: 3rem auto 0 auto;
 }
@@ -756,10 +755,17 @@ footer.site-footer {
     margin-bottom: 4rem;
   }
 
+  /* Add this to center last card in row */
+  .all-films .film-card:last-of-type {
+    margin: 0 auto;
+  }
+
   footer.site-footer {
     padding: 2rem;
   }
 }
+
+
 
 /* Desktop Styles */
 @media (min-width: 1400px) {
@@ -769,26 +775,31 @@ footer.site-footer {
   }
 
   .search-img {
-    margin: 0.25rem auto -2rem auto;
+    margin: 0.25rem auto -2.25rem auto;
   }
 
   h2 {
     font-size: 2.25rem;
   }
 
+  .glow-btn {
+    font-size: 1.05rem;
+  }
+
   .learn-more-message {
     font-size: 1.5rem;
+  }
+
+  .watchlist-description {
+    font-size: 1.3rem;
   }
 
   .all-films {
     justify-content: space-between;
   }
 
-  /* Add this to center last card in row */
-  .all-films .film-card:last-of-type {
-    margin: 0 auto;
-  }
 }
+
 
 /* Turn off ALL animations */
 @media (prefers-reduced-motion) {
