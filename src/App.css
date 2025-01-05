@@ -4,7 +4,7 @@
 
 :root {
   --header-footer: rgb(149, 239, 119);
-  --body: 	#fef1f8;
+  --body: #fef1f8;
   --accent: rgb(35, 117, 35);
   --glow-btn: #24836c;
   --glow-ring: #a7e690;
@@ -533,6 +533,7 @@ svg.arrow {
 .film-card {
   border-radius: 26px;
   border: 1px solid lightgrey;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   width: 100%;
   max-width: 350px;
   position: relative;
@@ -542,7 +543,6 @@ svg.arrow {
   transition: transform 0.8s;
   transform-style: preserve-3d;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .film-card.flipped {
@@ -572,6 +572,7 @@ svg.arrow {
 .film-card:nth-child(odd) {
   background-color: var(--film-card-2);
 }
+
 
 /* Color for Watchlist Film Cards */
 .watchlist-films .film-card {
@@ -703,7 +704,7 @@ footer.site-footer {
   .directions {
     margin: 2rem 0;
   }
-  
+
   .watchlist-films {
     padding: 4rem 0;
   }
@@ -756,6 +757,12 @@ footer.site-footer {
 
   .all-films {
     justify-content: space-between;
+  }
+
+
+  /* Add this to center last card in row */
+  .film-card:last-of-type {
+    margin: 0 auto;
   }
 }
 
