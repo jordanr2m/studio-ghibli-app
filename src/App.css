@@ -716,9 +716,16 @@ footer.site-footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 2.5rem;
   }
+
+  .watchlist-films .film-card:first-of-type {
+    margin-top: 4.5rem;
+  }
+
+  /* .watchlist-films .film-card {
+    height: 600px;
+  } */
 
   .watchlist-films h2 {
     margin-bottom: 0.5rem;
