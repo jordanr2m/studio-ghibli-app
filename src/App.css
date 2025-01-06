@@ -709,23 +709,20 @@ footer.site-footer {
   }
 
   .watchlist-films {
-    padding: 4rem 0;
+    padding: 4rem 0 5rem 0;
   }
 
   .watchlist-wrapper ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.5rem;
+    align-items: stretch;
+    gap: 3.5rem;
   }
 
   .watchlist-films .film-card:first-of-type {
     margin-top: 4.5rem;
   }
-
-  /* .watchlist-films .film-card {
-    height: 600px;
-  } */
 
   .watchlist-films h2 {
     margin-bottom: 0.5rem;
@@ -801,10 +798,21 @@ footer.site-footer {
     font-size: 1.3rem;
   }
 
+  .search-options h2 {
+    margin-top: 5rem;
+  }
+
+  p.directions {
+    margin: 1.5rem auto 2rem auto;
+  }
+
   .all-films {
     justify-content: space-between;
   }
 
+  .all-films .film-card {
+    
+  }
 }
 
 
