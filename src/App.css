@@ -780,7 +780,6 @@ footer.site-footer {
 }
 
 
-
 /* Desktop Styles */
 @media (min-width: 1400px) {
   .typewriter h1 {
@@ -802,6 +801,10 @@ footer.site-footer {
 
   .learn-more-message {
     font-size: 1.5rem;
+  }
+
+  .watchlist-films .film-card::before {
+    font-size: 2.1rem;
   }
 
   .watchlist-description {
@@ -827,20 +830,29 @@ footer.site-footer {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
   }
 
-  .film-info p {
-    font-size: 1.2rem;
-    margin: 0.75rem 0;
+  .film-img img {
+    max-height: 340px;
+    border: 10px solid white;
+    box-sizing: content-box;
   }
 
-  /* Add this to preserve watchlist card styles */
+  .film-info p {
+    font-size: 1.2rem;
+  }
+
+  /* Add these to preserve watchlist card styles */
   .watchlist-films .film-info p {
-    margin: 0.5rem 0;
     font-size: 1.15rem;
+  }
+  
+  .watchlist-films .film-img img {
+    height: 300px;
+    border: 6px solid white;
+    box-sizing: border-box;
   }
 
   .add-watchlist {
-    right: 6%;
-    top: 91.5%;
+    right: 5.5%;
   }
 
   .film-description {
