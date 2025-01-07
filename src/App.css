@@ -4,7 +4,8 @@
 
 :root {
   --header-footer: rgb(149, 239, 119);
-  --body: #ffedf7;
+  /* --body: #ffedf7; */
+  --body: #ffedf7ba;
   /* --body: #ffdbec; */
   --accent: rgb(35, 117, 35);
   --glow-btn: #24836c;
@@ -769,6 +770,10 @@ footer.site-footer {
     margin-bottom: 4rem;
   }
 
+  .no-match {
+    margin-top: 2rem;
+  }
+
   footer.site-footer {
     padding: 2rem;
   }
@@ -808,11 +813,38 @@ footer.site-footer {
   }
 
   p.directions {
-    margin: 1.5rem auto 2rem auto;
+    margin: 1.5rem auto 1rem auto;
+  }
+
+  /* Film Card styles for Desktop */
+  .all-films {
+    justify-content: center;
+    gap: 6rem;
   }
 
   .all-films .film-card {
+    max-width: 490px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  }
 
+  .film-info p {
+    font-size: 1.2rem;
+    margin: 0.75rem 0;
+  }
+
+  /* Add this to preserve watchlist card styles */
+  .watchlist-films .film-info p {
+    margin: 0.5rem 0;
+    font-size: 1.15rem;
+  }
+
+  .add-watchlist {
+    right: 6%;
+    top: 91.5%;
+  }
+
+  .film-description {
+    font-size: 1.1rem;
   }
 }
 

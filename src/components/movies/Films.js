@@ -16,7 +16,7 @@ const Films = ({ searchResults, filmsToWatch, addToWatchlist, removeFromWatchlis
         </>
 
       ) : (
-        <p className='no-match'>Sorry, no films match your search.</p>
+        <p className='no-match'>Sorry, no films match your search. Please try again.</p>
       )}
     </section>
   )
