@@ -788,15 +788,15 @@ footer.site-footer img {
 @media (min-width: 1400px) {
   .typewriter h1 {
     font-size: 3rem;
-    margin: 2.5rem 0;
-  }
-
-  .search-img {
-    margin: 0.25rem auto -2.25rem auto;
+    margin: 2.75rem 0;
   }
 
   h2 {
     font-size: 2.25rem;
+  }
+
+  .search-img {
+    margin: 0.5rem auto -2rem auto;
   }
 
   .glow-btn {
