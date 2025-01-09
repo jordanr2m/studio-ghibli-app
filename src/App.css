@@ -824,13 +824,14 @@ footer.site-footer img {
   }
 
   p.directions {
-    margin: 1.5rem auto 0 auto;
+    margin: 1.5rem auto -0.5rem auto;
   }
 
   /* Film Card styles for Desktop */
   .all-films {
     justify-content: center;
-    gap: 7rem;
+    gap: 7.5rem;
+    padding-bottom: 3rem;
   }
 
   .all-films .film-card {
