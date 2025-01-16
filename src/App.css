@@ -4,8 +4,6 @@
 
 :root {
   --header-footer: rgb(149, 239, 119);
-  /* --body: #ffedf7; */
-  /* --body: #ffedf7ba; */
   --body: #ffdbec;
   --accent: rgb(35, 117, 35);
   --glow-btn: #24836c;
@@ -200,8 +198,7 @@ header {
   padding: 2rem 0 3rem 0
 }
 
-header,
-.favorite-films {
+header {
   background-color: var(--header-footer);
 }
 
@@ -367,7 +364,6 @@ header h1 {
 
 .watchlist-films h2,
 .watchlist-description {
-  /* background: rgba(255, 255, 255, 0.899); */
   background-color: white;
   max-width: fit-content;
   border-radius: 12px;
@@ -410,13 +406,12 @@ header h1 {
   /* Adjusted top padding and top property to account for zig zags */
   padding: 0.5rem 0.9rem;
   top: -30px;
-  /* Center number (something positioned with absolute */
   width: 40px;
+  /* Center number */
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  /* text-align: center; */
   font-family: "Sour Gummy", sans-serif;
   font-size: 2rem;
   font-weight: 700;
@@ -636,7 +631,6 @@ p.score {
 }
 
 .add-watchlist svg {
-  display: inline-block;
   width: 4ch;
   max-width: 60px;
   margin: 0;
@@ -751,6 +745,7 @@ footer.site-footer img {
     gap: 3.5rem;
   }
 
+  /* Account for difference in margin when cards are in a row */
   .watchlist-films .film-card:first-of-type {
     margin-top: 4.5rem;
   }
@@ -815,7 +810,8 @@ footer.site-footer img {
     font-size: 2.1rem;
   }
 
-  .watchlist-description {
+  .watchlist-description,
+  .directions {
     font-size: 1.3rem;
   }
 
@@ -823,8 +819,8 @@ footer.site-footer img {
     margin-top: 5rem;
   }
 
-  p.directions {
-    margin: 1.5rem auto -0.5rem auto;
+  .directions {
+    margin: 1.5rem auto -1rem auto;
   }
 
   /* Film Card styles for Desktop */
@@ -849,6 +845,14 @@ footer.site-footer img {
     font-size: 1.2rem;
   }
 
+  .add-watchlist {
+    right: 5.5%;
+  }
+
+  .film-description {
+    font-size: 1.1rem;
+  }
+
   /* Add these to preserve watchlist card styles */
   .watchlist-films .film-info p {
     font-size: 1.15rem;
@@ -859,14 +863,7 @@ footer.site-footer img {
     border: 6px solid white;
     box-sizing: border-box;
   }
-
-  .add-watchlist {
-    right: 5.5%;
-  }
-
-  .film-description {
-    font-size: 1.1rem;
-  }
+  /* */
 }
 
 

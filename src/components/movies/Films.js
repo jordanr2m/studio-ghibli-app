@@ -14,7 +14,6 @@ const Films = ({ searchResults, filmsToWatch, addToWatchlist, removeFromWatchlis
             convertRuntime={convertRuntime}
           />
         </>
-
       ) : (
         <p className='no-match'>Sorry, no films match your search. Please try again.</p>
       )}

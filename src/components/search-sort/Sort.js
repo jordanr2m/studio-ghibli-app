@@ -8,7 +8,7 @@ const Sort = ({ movies, setMovies }) => {
     // Convert Rotten Tomatoes score into a number
     const moviesToSort = [...movies];
     moviesToSort.forEach(movie => {
-        movie.rt_score = Number(movie.rt_score)
+        movie.rt_score = Number(movie.rt_score);
     });
 
     const sortMovies = (option) => {
