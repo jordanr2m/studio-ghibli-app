@@ -45,8 +45,7 @@ function App() {
   // Search bar functionality
   useEffect(() => {
     const filteredResults = movies.filter(movie => (
-      (movie.title).toLowerCase()).includes(search.toLowerCase()
-      )
+      (movie.title).toLowerCase()).includes(search.toLowerCase())
     );
     setSearchResults(filteredResults)
   }, [movies, search]);
